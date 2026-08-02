@@ -43,31 +43,52 @@
     <h2 class="center">The Line-Up</h2>
     <div class="menu-grid">
 
-      <article class="menu-card">
+      <article class="menu-card" data-item="Cinnamon Rolls">
         <div class="menu-icon">🍥</div>
         <h3>Cinnamon Rolls</h3>
         <p>Soft, pillowy dough rolled with cinnamon-brown sugar filling and finished with a sweet glaze.</p>
+        <div class="stepper">
+          <button type="button" class="step-btn minus" aria-label="Remove one">–</button>
+          <span class="step-count">0</span>
+          <button type="button" class="step-btn plus" aria-label="Add one">+</button>
+        </div>
       </article>
 
-      <article class="menu-card">
+      <article class="menu-card" data-item="Banana Bread">
         <div class="menu-icon">🍌</div>
         <h3>Banana Bread</h3>
         <p>Moist, rich loaves made with real ripe bananas — a comforting classic done right.</p>
+        <div class="stepper">
+          <button type="button" class="step-btn minus" aria-label="Remove one">–</button>
+          <span class="step-count">0</span>
+          <button type="button" class="step-btn plus" aria-label="Add one">+</button>
+        </div>
       </article>
 
-      <article class="menu-card">
+      <article class="menu-card" data-item="Muffins">
         <div class="menu-icon">🧁</div>
         <h3>Muffins</h3>
         <p>Tender, bakery-style muffins baked fresh in small batches. Ask about current flavors.</p>
+        <div class="stepper">
+          <button type="button" class="step-btn minus" aria-label="Remove one">–</button>
+          <span class="step-count">0</span>
+          <button type="button" class="step-btn plus" aria-label="Add one">+</button>
+        </div>
       </article>
 
-      <article class="menu-card">
+      <article class="menu-card" data-item="Basque Burnt Cheesecake">
         <div class="menu-icon">🍰</div>
         <h3>Basque Burnt Cheesecake</h3>
         <p>Caramelized on top, creamy in the middle — the crustless classic done the Chummies way.</p>
+        <div class="stepper">
+          <button type="button" class="step-btn minus" aria-label="Remove one">–</button>
+          <span class="step-count">0</span>
+          <button type="button" class="step-btn plus" aria-label="Add one">+</button>
+        </div>
       </article>
 
     </div>
+    <p class="menu-hint">Tap <strong>+</strong> on anything you'd like, then scroll down to send your order.</p>
   </div>
 </section>
 
@@ -85,13 +106,55 @@
   <div class="wrap order-inner">
     <p class="eyebrow center">Ready to order?</p>
     <h2 class="center">Let's Get You a Box</h2>
-    <p class="center order-sub">Reach out with what you'd like and when you need it — orders are baked fresh, so a little advance notice helps.</p>
+    <p class="center order-sub">Fill out the form below to place your order — orders are baked fresh for pickup or delivery every <strong>Wednesday</strong> and <strong>Saturday</strong>.</p>
 
     <div class="contact-card">
-      <p><strong>Message us on:</strong> <span class="placeholder">[ Add your Instagram / Facebook handle here ]</span></p>
-      <p><strong>Or contact:</strong> <span class="placeholder">[ Add your phone number or email here ]</span></p>
-      <p><strong>Pickup / delivery:</strong> <span class="placeholder">[ Add your pickup area or delivery info here ]</span></p>
+      <p><strong>Message us on:</strong> facebook.com/chummies</p>
+      <p><strong>Or call/text:</strong> 0912 123 4567</p>
+      <p><strong>Pickup:</strong> Sta. Maria</p>
+      <p><strong>Delivery:</strong> via Lalamove</p>
+      <p><strong>Order days:</strong> Wednesday &amp; Saturday only</p>
     </div>
+
+    <form class="order-form" id="orderForm">
+      <div class="order-summary" id="orderSummary">
+        <p class="placeholder">No items yet — tap + on your favorites above.</p>
+      </div>
+
+      <div class="form-row">
+        <label for="custName">Name</label>
+        <input type="text" id="custName" name="Name" required>
+      </div>
+
+      <div class="form-row">
+        <label for="custContact">Contact number</label>
+        <input type="tel" id="custContact" name="Contact" required>
+      </div>
+
+      <div class="form-row">
+        <label>Pickup or delivery?</label>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="Fulfillment" value="Pickup (Sta. Maria)" checked> Pickup (Sta. Maria)</label>
+          <label class="radio-option"><input type="radio" name="Fulfillment" value="Delivery (Lalamove)"> Delivery (Lalamove)</label>
+        </div>
+      </div>
+
+      <div class="form-row" id="addressRow" style="display:none;">
+        <label for="custAddress">Delivery address</label>
+        <input type="text" id="custAddress" name="Address">
+      </div>
+
+      <div class="form-row">
+        <label>Order day</label>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="OrderDay" value="Wednesday" checked> Wednesday</label>
+          <label class="radio-option"><input type="radio" name="OrderDay" value="Saturday"> Saturday</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn" id="submitBtn">Send order</button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
   </div>
 </section>
 
@@ -105,6 +168,7 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<script src="script.js"></script>
 
 </body>
 </html>
