@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chummies by Grace — Home Baked, Made with Chum</title>
+<meta name="description" content="Cinnamon rolls, banana bread, muffins and Basque burnt cheesecake, baked fresh by Grace.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <img src="images/chummies-logo.jpg" alt="Chummies by Grace" class="logo">
+    <nav class="nav">
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#order">Order</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">A home bakery, box by box</p>
+    <h1>Baked warm. Boxed with care.<br>Shared with your chummies.</h1>
+    <p class="hero-sub">Cinnamon rolls, banana bread, muffins, and Basque burnt cheesecake — made fresh to order.</p>
+    <a href="#order" class="btn">See how to order</a>
+  </div>
+  <div class="swoosh" aria-hidden="true">
+    <svg viewBox="0 0 600 40" preserveAspectRatio="none">
+      <path d="M0,20 C150,45 450,-5 600,20" stroke="#8A5A34" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <p class="eyebrow center">What's in the box</p>
+    <h2 class="center">The Line-Up</h2>
+    <div class="menu-grid">
+
+      <article class="menu-card">
+        <div class="menu-icon">🍥</div>
+        <h3>Cinnamon Rolls</h3>
+        <p>Soft, pillowy dough rolled with cinnamon-brown sugar filling and finished with a sweet glaze.</p>
+      </article>
+
+      <article class="menu-card">
+        <div class="menu-icon">🍌</div>
+        <h3>Banana Bread</h3>
+        <p>Moist, rich loaves made with real ripe bananas — a comforting classic done right.</p>
+      </article>
+
+      <article class="menu-card">
+        <div class="menu-icon">🧁</div>
+        <h3>Muffins</h3>
+        <p>Tender, bakery-style muffins baked fresh in small batches. Ask about current flavors.</p>
+      </article>
+
+      <article class="menu-card">
+        <div class="menu-icon">🍰</div>
+        <h3>Basque Burnt Cheesecake</h3>
+        <p>Caramelized on top, creamy in the middle — the crustless classic done the Chummies way.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-inner">
+    <div class="about-text">
+      <p class="eyebrow">The story so far</p>
+      <h2>Made by Grace, for good company</h2>
+      <p>Chummies started in a home kitchen with one simple idea: good food is better shared. Every order is baked fresh, in small batches, with the same care you'd give something made for a friend. That's where the name comes from — everything here is made for your chummies.</p>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="order">
+  <div class="wrap order-inner">
+    <p class="eyebrow center">Ready to order?</p>
+    <h2 class="center">Let's Get You a Box</h2>
+    <p class="center order-sub">Reach out with what you'd like and when you need it — orders are baked fresh, so a little advance notice helps.</p>
+
+    <div class="contact-card">
+      <p><strong>Message us on:</strong> <span class="placeholder">[ Add your Instagram / Facebook handle here ]</span></p>
+      <p><strong>Or contact:</strong> <span class="placeholder">[ Add your phone number or email here ]</span></p>
+      <p><strong>Pickup / delivery:</strong> <span class="placeholder">[ Add your pickup area or delivery info here ]</span></p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <img src="images/chummies-logo.jpg" alt="Chummies by Grace" class="footer-logo">
+    <p>&copy; <span id="year"></span> Chummies by Grace. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
